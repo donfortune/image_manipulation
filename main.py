@@ -10,7 +10,7 @@ if not os.path.exists(new_file):
 for filename in os.listdir(files):
     if filename.endswith('48dp'):
         filepath = os.path.join(files, filename)
-        with Image.open(filepath) as img:
+        with Image.open(filepath) as img: #opening the image
             width, height = img.size
             new_size = (width // 2, height // 2)
             resized_img = img.resize(new_size)
